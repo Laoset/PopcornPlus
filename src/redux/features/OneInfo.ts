@@ -29,6 +29,8 @@ const initialState: Movies = {
     first_air_date: "",
     name: "",
     cast: [],
+    type: "",
+    key: "",
   },
   cast: {
     cast: [],
