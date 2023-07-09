@@ -17,14 +17,27 @@ const TopRated: React.FC<OnTheatresProps> = ({ searchForId }) => {
           disableOnInteraction: false,
         }}
         direction={"horizontal"}
-        slidesPerView={6}
-        spaceBetween={20}
-        className="h-[28rem] w-[110rem] flex flex-row p-4 "
+        breakpoints={{
+          1280: {
+            slidesPerView: 6,
+            spaceBetween: 30,
+          },
+
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          300: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+        }}
+        className="lg:h-[20rem] w-[90vw] flex flex-row"
       >
         {topRated.map((topRated: Movie) => (
           <SwiperSlide
             key={topRated.id}
-            className="h-96 w-72 flex flex-col hover:border-solid hover:border-4 hover:border[#f9f9f9cc] hover:rounded-xl hover:scale-105 duration-500 cursor-pointer"
+            className="h-full w-full flex flex-col hover:border-solid hover:border-4 hover:border[#f9f9f9cc] hover:rounded-xl hover:scale-105 duration-500 cursor-pointer"
             onClick={() => searchForId(topRated.id, "movie")}
           >
             <img

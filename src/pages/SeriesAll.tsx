@@ -20,8 +20,8 @@ const SeriesAll = () => {
     dispatch(getAllSeries());
   }, []);
   return (
-    <div className="p-6 relative  flex flex-col gap-6">
-      <div className="flex">
+    <div className="lg:p-4  flex flex-col gap-6  lg:w-[94vw]">
+      <div className="">
         <Swiper
           autoplay={{
             delay: 5000,
@@ -30,7 +30,7 @@ const SeriesAll = () => {
           direction={"horizontal"}
           slidesPerView={1}
           spaceBetween={30}
-          className="h-[80vh] w-[110rem] flex-row rounded-xl"
+          className="h-[80vh] flex flex-row rounded-xl"
           modules={[Autoplay]}
         >
           {allTypesSeries?.popularSeries.results.map((seriePopular: Movie) => (
@@ -38,7 +38,7 @@ const SeriesAll = () => {
               {seriePopular.backdrop_path && seriePopular.overview ? (
                 <SwiperSlide
                   key={seriePopular.id}
-                  className="flex flex-col bg-[#10121a] border-4 border-transparent hover:border-4 hover:border-[#f9f9f9cc] duration-500 cursor-pointer hover:rounded-xl"
+                  className="w-full flex flex-col bg-[#10121a] border-4 border-transparent hover:border-4 hover:border-[#f9f9f9cc] duration-500 cursor-pointer hover:rounded-xl"
                   onClick={() =>
                     searchForId(seriePopular.id, seriePopular.media_type)
                   }
@@ -68,7 +68,7 @@ const SeriesAll = () => {
           ))}
         </Swiper>
       </div>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-10">
         <h1 className="font-bold text-4xl text-[#f9f9f9]">Trending</h1>
         <Trending searchForId={searchForId} />
         <h1 className="font-bold text-4xl text-[#f9f9f9]">Top rated</h1>

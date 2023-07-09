@@ -49,12 +49,10 @@ function App() {
     }
   };
   return (
-    <div className="flex flex-row h-screen w-full">
-      <div className="">
-        <Navbar />
-        <SideBar />
-      </div>
-      <div className="relative ml-20 mt-14">{renderPage()}</div>
+    <div className="flex flex-row h-screen w-full ">
+      <Navbar />
+      <SideBar />
+      <div className="relative ml-20 mt-16 w-full">{renderPage()}</div>
     </div>
   );
 }

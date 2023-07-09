@@ -20,15 +20,28 @@ const PopularMaTV = () => {
       grid={{
         rows: 2,
       }}
-      slidesPerView={6}
-      spaceBetween={30}
+      breakpoints={{
+        1280: {
+          slidesPerView: 6,
+          spaceBetween: 30,
+        },
+
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+        350: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+      }}
       modules={[Grid]}
-      className="h-[40rem] w-[110rem] flex flex-row p-4"
+      className="lg:h-[40rem] w-[90vw] flex flex-row"
     >
       {popularMovies.map((movie: Movie) => (
         <SwiperSlide
           key={movie.id}
-          className="h-72 w-72 hover:border-solid hover:border-4 hover:border[#f9f9f9cc] hover:scale-105 duration-500 cursor-pointer"
+          className="h-72 w-full hover:border-solid hover:border-4 hover:border[#f9f9f9cc] hover:scale-105 duration-500 cursor-pointer"
           onClick={() => searchForId(movie.id, "movie")}
         >
           <img
