@@ -10,19 +10,19 @@ const Favorites = () => {
     dispatch(changeRoute("Detalle"));
   };
   return (
-    <div className="p-6 relative flex">
-      <div className="flex flex-col gap-6">
-        <h1 className="font-bold text-[3rem] text-[#f9f9f9]">Watchlist</h1>
-        <h4 className="font-bold text-[1.3rem] text-[#f9f9f9]">
+    <div className="lg:p-4 w-[87vw] flex flex-col gap-6 lg:w-[92vw] xl:w-[94.3vw]">
+      <div className="flex flex-col gap-6 w-full">
+        <h1 className="font-bold text-[2rem] text-[#f9f9f9]">Watchlist</h1>
+        <h4 className="font-bold text-[1.2rem] text-[#f9f9f9]">
           My Movies & Series
         </h4>
-        <div className="h-[80rem] w-[110rem] flex flex-row justify-center flex-wrap">
+        <div className=" w-full flex flex-row justify-center flex-wrap">
           {favoritos?.map((favorititos) => (
             <>
               {favorititos.poster_path ? (
                 <div
                   key={favorititos.id}
-                  className="h-96 w-72 hover:border-solid hover:border-4 hover:border-gray-200 hover:scale-105 duration-300 cursor-pointer m-3 hover:rounded-lg"
+                  className="lg:h-96 h-56  hover:border-solid hover:border-4 hover:border-gray-200 hover:scale-105 duration-300 cursor-pointer m-3 hover:rounded-lg"
                   onClick={() =>
                     searchForId(
                       favorititos.id,

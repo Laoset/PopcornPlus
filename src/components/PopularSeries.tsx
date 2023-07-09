@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-import { Grid } from "swiper";
 import { changeRoute, getDetalle } from "../service/Fetching";
 import { Movie } from "../types/Types";
 const PopularSeries = () => {
@@ -16,9 +15,11 @@ const PopularSeries = () => {
   };
   return (
     <Swiper
-      grid={{
-        rows: 2,
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
       }}
+      direction={"horizontal"}
       breakpoints={{
         1280: {
           slidesPerView: 6,
@@ -34,13 +35,12 @@ const PopularSeries = () => {
           spaceBetween: 10,
         },
       }}
-      modules={[Grid]}
-      className="lg:h-[40rem] w-[90vw] flex flex-row"
+      className="lg:h-[22rem] w-[90vw] xl:w-full flex flex-row pl-3 pr-3 lg:p-2"
     >
       {popularSeries.map((serie: Movie) => (
         <SwiperSlide
           key={serie.id}
-          className="h-72 w-full hover:border-solid hover:border-4 hover:border[#f9f9f9cc] hover:scale-105 duration-500 cursor-pointer"
+          className="h-72 hover:border-solid hover:border-4 hover:border[#f9f9f9cc] hover:scale-105 duration-500 cursor-pointer"
           onClick={() => searchForId(serie.id, "tv")}
         >
           <img

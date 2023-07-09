@@ -18,16 +18,29 @@ const Cast = () => {
         }}
         modules={[Pagination]}
         direction={"horizontal"}
-        slidesPerView={9}
-        spaceBetween={20}
-        className="h-[16rem] w-[110rem] flex flex-row p-4 "
+        breakpoints={{
+          1280: {
+            slidesPerView: 9,
+            spaceBetween: 30,
+          },
+
+          640: {
+            slidesPerView: 5,
+            spaceBetween: 15,
+          },
+          300: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+        }}
+        className="lg:h-[22rem] w-[90vw] h-[15rem] xl:w-full flex flex-row pl-3 pr-3 lg:p-2"
       >
         {cast.map((cast: MovieCast) => (
           <>
             {cast.profile_path ? (
               <SwiperSlide
                 key={`${cast.id}`}
-                className="h-48 flex flex-col text-center "
+                className="w-full h-48 flex flex-col text-center"
               >
                 <img
                   src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`}

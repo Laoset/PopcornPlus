@@ -24,7 +24,7 @@ const Detail = () => {
   console.log(oneInfo);
 
   return (
-    <div className="p-6 relative flex flex-col gap-6">
+    <div className="lg:p-4 w-[87vw] flex flex-col gap-6 lg:w-[92vw] xl:w-[94.3vw]">
       {isWatching ? (
         <div className="flex flex-col justify-center align-middle items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50  w-full">
           <button className="mb-4 text-lg" onClick={() => setIsWatching(false)}>
@@ -40,7 +40,7 @@ const Detail = () => {
         </div>
       ) : null}
       <div className={`flex ${isWatching ? "opacity-10" : "opacity-100"}`}>
-        <div className="h-[80vh] w-[110rem] flex-row rounded-xl">
+        <div className="h-[80vh] w-full flex-row rounded-xl">
           <div className="flex flex-col h-[100vh]">
             <div
               className="w-full h-full rounded-lg"
@@ -49,8 +49,8 @@ const Detail = () => {
                 backgroundSize: "cover",
               }}
             />
-            <div className="absolute text-white font-bold w-[40rem] mt-32 ml-10 h-[35rem] flex flex-col justify-evenly">
-              <p className="font-black text-7xl text-[#FAF9F6]">
+            <div className="absolute text-white font-bold lg:w-[40rem] lg:mt-32 lg:ml-14 ml-8 h-[35rem] flex flex-col justify-evenly">
+              <p className="font-black lg:text-7xl text-4xl text-[#FAF9F6]">
                 {oneInformacion.original_title || oneInformacion.name}
               </p>
               <div className="flex flex-row gap-4 font-bold ">
@@ -59,7 +59,7 @@ const Detail = () => {
                     oneInformacion.first_air_date?.split("-")[0]}
                 </p>
               </div>
-              <p className="text-[17px] text-gray-300">
+              <p className="lg:text-[17px] text-[16px] text-gray-300">
                 {oneInformacion.overview}
               </p>
               <div className="flex flex-row align-middle items-center gap-10">
@@ -101,9 +101,9 @@ const Detail = () => {
           isWatching ? "opacity-10" : "opacity-100"
         }`}
       >
-        <h4 className="font-bold text-[1.5rem] text-[#f9f9f9] ml-10">Cast</h4>
+        <h4 className="font-bold text-[1.5rem] text-[#f9f9f9]">Cast</h4>
         <Cast />
-        <h4 className="font-bold text-[1.5rem] text-[#f9f9f9] ml-10">
+        <h4 className="font-bold text-[1.5rem] text-[#f9f9f9]">
           More like this
         </h4>
         <Similar />

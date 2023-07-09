@@ -18,7 +18,7 @@ const MainData = () => {
   };
 
   return (
-    <div className="lg:p-4  flex flex-col gap-6  lg:w-[94vw]">
+    <div className="lg:p-4 w-[87vw] flex flex-col gap-6 lg:w-[92vw] xl:w-[94.3vw]">
       <div className="">
         <Swiper
           autoplay={{
@@ -34,13 +34,13 @@ const MainData = () => {
           {allTrending?.map((msTrending: Movie) => (
             <SwiperSlide
               key={msTrending.id}
-              className="w-full flex flex-col bg-[#10121a] border-4 border-transparent hover:border-4 hover:border-[#f9f9f9cc] duration-500 cursor-pointer hover:rounded-xl"
+              className="flex flex-col bg-[#10121a] border-4 border-transparent hover:border-4 hover:border-[#f9f9f9cc] duration-500 cursor-pointer hover:rounded-xl"
               onClick={() => searchForId(msTrending.id, msTrending.media_type)}
             >
               <img
                 src={`https://image.tmdb.org/t/p/original${msTrending.backdrop_path}`}
                 alt="imgaen"
-                className="w-full h-full rounded-lg opacity-60 object-cover "
+                className="h-full rounded-lg opacity-60 object-cover "
               />
               <div className="absolute text-white font-bold lg:w-[40rem] lg:mt-32 lg:ml-14 ml-8 h-[35rem] flex flex-col justify-evenly">
                 <p className="font-black lg:text-7xl text-4xl text-[#FAF9F6]">
@@ -69,7 +69,7 @@ const MainData = () => {
           ))}
         </Swiper>
       </div>
-      <div className="flex flex-col gap-10  ">
+      <div className="flex flex-col gap-10">
         <h1 className="font-bold text-[1.5rem] text-[#f9f9f9]">
           Popular Series
         </h1>

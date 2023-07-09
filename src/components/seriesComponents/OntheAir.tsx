@@ -32,18 +32,18 @@ const OntheAir: React.FC<OnTheatresProps> = ({ searchForId }) => {
             spaceBetween: 10,
           },
         }}
-        className="lg:h-[20rem] w-[90vw] flex flex-row"
+        className="lg:h-[22rem] w-[90vw] xl:w-full flex flex-row pl-3 pr-3 lg:p-2"
       >
         {ontheAir.map((ontheAir: Movie) => (
           <SwiperSlide
             key={ontheAir.id}
-            className="h-full w-full flex flex-col hover:border-solid hover:border-4 hover:border[#f9f9f9cc] hover:rounded-xl hover:scale-105 duration-500 cursor-pointer"
+            className="h-full  flex flex-col hover:border-solid hover:border-4 hover:border[#f9f9f9cc] hover:rounded-xl hover:scale-105 duration-500 cursor-pointer"
             onClick={() => searchForId(ontheAir.id, "tv")}
           >
             <img
               src={`https://image.tmdb.org/t/p/w500${ontheAir.poster_path}`}
               alt="imgaen"
-              className="w-full h-full rounded-lg"
+              className=" h-full rounded-lg"
             />
           </SwiperSlide>
         ))}
