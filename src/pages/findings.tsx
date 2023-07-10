@@ -11,15 +11,15 @@ const Findings = () => {
     dispatch(changeRoute("Detalle"));
   };
   return (
-    <div className="p-6 relative flex">
+    <div className="lg:p-4 w-[87vw] flex flex-col gap-6 lg:w-[92vw] xl:w-[94.3vw]">
       <div className="flex flex-col gap-6">
-        <div className="h-[40rem] w-[110rem] flex flex-row justify-center flex-wrap gap-6 pt-12">
+        <div className="h-[40rem] w-full flex flex-row justify-center flex-wrap gap-6 pt-12">
           {detallitos?.map((serie) => (
             <>
               {serie.poster_path ? (
                 <div
                   key={serie.id}
-                  className="h-72 w-72 hover:border-solid hover:border-4 hover:border-gray-200 hover:scale-105 duration-500 cursor-pointer"
+                  className="h-72 hover:border-solid hover:border-4 hover:border-gray-200 hover:scale-105 duration-500 cursor-pointer"
                   onClick={() =>
                     searchForId(serie.id, serie.original_title ? "movie" : "tv")
                   }
