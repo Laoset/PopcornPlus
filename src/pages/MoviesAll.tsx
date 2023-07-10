@@ -44,7 +44,7 @@ const MoviesAll = () => {
               <img
                 src={`https://image.tmdb.org/t/p/original${moviePopular.backdrop_path}`}
                 alt="imgaen"
-                className=" h-full rounded-lg opacity-60 object-cover "
+                className=" h-full rounded-lg opacity-60"
               />
               <div className="absolute text-white font-bold lg:w-[40rem] lg:mt-32 lg:ml-14 ml-8 h-[35rem] flex flex-col justify-evenly">
                 <p className="font-black lg:text-7xl text-4xl text-[#FAF9F6]">
