@@ -22,7 +22,7 @@ const MoviesAll = () => {
     dispatch(getAllMovies());
   }, []);
   return (
-    <div className="lg:p-4 w-[90vw] flex flex-col gap-6 lg:w-[92vw] xl:w-[94.3vw]">
+    <div className="lg:p-4 w-[87vw] flex flex-col gap-6 lg:w-[92vw] xl:w-[94.3vw]">
       <div className="">
         <Swiper
           autoplay={{
@@ -44,7 +44,7 @@ const MoviesAll = () => {
               <img
                 src={`https://image.tmdb.org/t/p/original${moviePopular.backdrop_path}`}
                 alt="imgaen"
-                className=" h-full rounded-lg opacity-60"
+                className=" h-full rounded-lg opacity-60 lg:object-fill object-cover"
               />
               <div className="absolute text-white font-bold lg:w-[40rem] lg:mt-32 lg:ml-14 ml-8 h-[35rem] flex flex-col justify-evenly">
                 <p className="font-black lg:text-7xl text-4xl text-[#FAF9F6]">

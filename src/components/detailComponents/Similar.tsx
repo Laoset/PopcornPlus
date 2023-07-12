@@ -21,20 +21,24 @@ const Similar = () => {
         direction={"horizontal"}
         breakpoints={{
           1280: {
-            slidesPerView: 9,
+            slidesPerView: 6,
             spaceBetween: 30,
           },
 
           640: {
-            slidesPerView: 5,
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          500: {
+            slidesPerView: 2,
             spaceBetween: 15,
           },
           300: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 10,
           },
         }}
-        className="w-[90vw] h-[22rem] xl:w-full flex flex-row pl-3 pr-3 lg:p-2"
+        className="w-[87vw] h-[22rem] xl:w-full flex flex-row pl-3 pr-3 lg:p-2"
       >
         {similarInfo.map((similar: Movie) => (
           <>

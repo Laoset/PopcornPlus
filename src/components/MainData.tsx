@@ -40,10 +40,10 @@ const MainData = () => {
               <img
                 src={`https://image.tmdb.org/t/p/original${msTrending.backdrop_path}`}
                 alt="imgaen"
-                className="h-full rounded-lg opacity-60 "
+                className="h-full rounded-lg opacity-60 object-cover lg:object-fill "
               />
               <div className="absolute text-white font-bold lg:w-[40rem] lg:mt-32 lg:ml-14 ml-8 h-[35rem] flex flex-col justify-evenly">
-                <p className="font-black lg:text-7xl text-4xl text-[#FAF9F6]">
+                <p className="font-black lg:text-7xl sm:text-4xl text-2xl text-[#FAF9F6]">
                   {msTrending.original_title || msTrending.name}
                 </p>
                 <div className="flex flex-row gap-4 font-bold ">
@@ -61,7 +61,7 @@ const MainData = () => {
                     </p>
                   )}
                 </div>
-                <p className="lg:text-[17px] text-[16px] text-gray-300">
+                <p className="lg:text-[17px] text-[14px] sm:text-[16px] text-gray-300">
                   {msTrending.overview}
                 </p>
               </div>

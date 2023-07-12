@@ -12,9 +12,9 @@ const Navbar = () => {
     <nav className="bg-[#0e0b14] h-16 w-full flex flex-row items-center align-middle fixed z-50 justify-between">
       <div className="flex flex-row align-middle justify-center text-center items-center gap-4">
         <PiPopcornFill className="h-fit mt-1 w-16 text-red-600 cursor-pointer ml-8" />
-        <h1 className="text-white text-2xl">PopCorn+</h1>
+        <h1 className="text-white text-xl sm:text-2xl">PopCorn+</h1>
       </div>
-      <div className="bg-[#4c516d] h-10 flex flex-row mr-8 rounded-lg items-center w-80 gap-4">
+      <div className="bg-[#4c516d] h-10 flex flex-row mr-8 rounded-lg items-center sm:w-80 w-40 gap-4">
         <MagnifyingGlassIcon className="ml-2 h-6 w-6 text-white opacity-80" />
         <input
           className="bg-transparent w-full text-white h-full outline-none"

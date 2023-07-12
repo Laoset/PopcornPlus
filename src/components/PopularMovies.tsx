@@ -31,12 +31,16 @@ const PopularMaTV = () => {
           slidesPerView: 3,
           spaceBetween: 15,
         },
-        300: {
+        500: {
           slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        300: {
+          slidesPerView: 1,
           spaceBetween: 10,
         },
       }}
-      className="lg:h-[22rem] w-[90vw] xl:w-full flex flex-row pl-3 pr-3 lg:p-2"
+      className="lg:h-[22rem] w-[87vw] xl:w-full flex flex-row pl-3 pr-3 lg:p-2"
     >
       {popularMovies.map((movie: Movie) => (
         <SwiperSlide

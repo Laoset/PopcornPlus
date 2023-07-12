@@ -17,8 +17,8 @@ const SideBar = () => {
     dispatch(changeRoute(texto));
   };
   return (
-    <nav className="bg-[#0e0b14] h-full w-[5rem]  flex flex-col items-center align-middle top-0 fixed justify-around">
-      <section className="flex gap-16 flex-col flex-wrap justify-center text-center">
+    <nav className="bg-[#0e0b14] h-full w-[5rem] flex flex-col items-center align-middle top-0 fixed justify-around">
+      <section className="flex  gap-8 lg:gap-16 flex-col flex-wrap justify-center text-center">
         <div
           className={`text-[#f9f9f9] hover:opacity-100  hover:text-[#f9f9f9]  ${
             routero === "Home" ? "text-[#f9f9f9]" : "opacity-20"
